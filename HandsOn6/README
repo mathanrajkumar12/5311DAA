@@ -1,0 +1,32 @@
+The average runtime complexity of the non-random pivot version of quicksort is O(n*log(n)). This can be derived using the following mathematical analysis:
+
+Recurrence Relation:
+
+The quicksort algorithm can be represented by the following recurrence relation:
+
+T(n) = T(i) + T(n-i-1) + O(n)
+where:
+
+T(n) is the time taken to sort an array of size n.
+i is the index of the pivot element.
+T(i) and T(n-i-1) are the time taken to sort the left and right subarrays, respectively.
+O(n) is the time taken to partition the array around the pivot.
+Best Case Analysis:
+
+In the best case, the pivot always partitions the array into two roughly equal halves. This results in the following recurrence relation:
+
+T(n) = 2T(n/2) + O(n)
+Solving this recurrence relation using the Master Theorem, we get:
+
+T(n) = O(n*log(n))
+Worst Case Analysis:
+
+In the worst case, the pivot always chooses the smallest or largest element, leading to a recurrence relation:
+
+T(n) = T(n-1) + O(n)
+Solving this recurrence relation, we get:
+
+T(n) = O(n^2)
+Average Case Analysis:
+
+The average case analysis is more complex. It can be shown that the expected runtime is O(n*log(n)) using probabilistic analysis. This involves analyzing the probability of different pivot choices and their corresponding recurrence relations.
